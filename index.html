@@ -1,0 +1,1619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="BAM TECH — Professional electrical installations, solar power systems, CCTV, fire alarms, intercoms, time & attendance, and electric fencing for residential, commercial, and industrial clients.">
+<title>BAM TECH — Powering Your World. Securing Your Future.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============ RESET & ROOT ============ */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#080D16; --bg-2:#101A2A; --bg-3:#0D1422;
+  --accent:#FFB000; --accent-2:#F97316;
+  --text:#F8FAFC; --muted:#A8B3C7; --muted-2:#6B7A94;
+  --border:#263449; --border-h:#3A4A63;
+  --success:#22C55E;
+  --ease:cubic-bezier(.22,1,.36,1);
+  --ease-p:cubic-bezier(.4,0,.2,1);
+  --container:1280px;
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,-apple-system,BlinkMacSystemFont,sans-serif;font-size:16px;line-height:1.65;font-weight:400;overflow-x:hidden;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+input,textarea,select{font-family:inherit;font-size:inherit}
+h1,h2,h3,h4,h5{font-family:'Space Grotesk',sans-serif;font-weight:600;line-height:1.15;letter-spacing:-.02em;color:var(--text)}
+section[id]{scroll-margin-top:80px}
+
+/* ============ LAYOUT ============ */
+.container{max-width:var(--container);margin:0 auto;padding:0 32px}
+section{padding:8rem 0;position:relative}
+.section-header{margin-bottom:4rem;max-width:720px}
+.section-header.center{margin-left:auto;margin-right:auto;text-align:center}
+.eyebrow{font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--accent);display:inline-flex;align-items:center;gap:14px;margin-bottom:1.5rem}
+.eyebrow::before{content:'';width:28px;height:1px;background:var(--accent);display:inline-block}
+.section-header.center .eyebrow{justify-content:center}
+.section-header.center .eyebrow::after{content:'';width:28px;height:1px;background:var(--accent);display:inline-block}
+.section-title{font-size:clamp(2rem,4vw,3rem);font-weight:600;margin-bottom:1.25rem;letter-spacing:-.03em}
+.section-subtitle{color:var(--muted);font-size:1.05rem;line-height:1.7;max-width:640px}
+.section-header.center .section-subtitle{margin-left:auto;margin-right:auto}
+
+/* ============ BUTTONS ============ */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 28px;font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:500;letter-spacing:.02em;border-radius:4px;transition:all .3s var(--ease);white-space:nowrap;border:1px solid transparent}
+.btn-primary{background:var(--accent);color:#0A0E16;border-color:var(--accent)}
+.btn-primary:hover{background:transparent;color:var(--accent);transform:translateY(-1px)}
+.btn-secondary{background:transparent;color:var(--text);border-color:var(--border)}
+.btn-secondary:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-1px)}
+.btn-arrow{transition:transform .3s var(--ease)}
+.btn:hover .btn-arrow{transform:translateX(4px)}
+
+/* ============ NAVIGATION ============ */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:18px 0;background:rgba(8,13,22,.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:all .3s var(--ease)}
+.nav.scrolled{padding:12px 0;border-bottom-color:var(--border);background:rgba(8,13,22,.95)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:2rem}
+.logo{font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;letter-spacing:.02em;display:flex;align-items:center;gap:10px}
+.logo-mark{width:34px;height:34px;background:var(--accent);color:#0A0E16;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:700;border-radius:5px;position:relative;overflow:hidden}
+.logo-mark::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,transparent 40%,rgba(255,255,255,.2) 50%,transparent 60%)}
+.logo-text{color:var(--text)}
+.logo-text span{color:var(--accent)}
+.nav-links{display:flex;align-items:center;gap:32px;list-style:none}
+.nav-links a{font-size:14px;font-weight:500;color:var(--muted);transition:color .2s var(--ease);position:relative}
+.nav-links a:hover,.nav-links a.active{color:var(--text)}
+.nav-links a.active::after{content:'';position:absolute;bottom:-6px;left:0;right:0;height:2px;background:var(--accent);border-radius:1px}
+.nav-cta{display:flex;align-items:center;gap:16px}
+.menu-toggle{display:none;width:40px;height:40px;flex-direction:column;justify-content:center;align-items:center;gap:5px}
+.menu-toggle span{width:22px;height:2px;background:var(--text);transition:all .3s var(--ease);transform-origin:center}
+.menu-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.menu-toggle.open span:nth-child(2){opacity:0}
+.menu-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+.mobile-menu{position:fixed;top:0;right:-100%;width:85%;max-width:380px;height:100vh;background:var(--bg-2);border-left:1px solid var(--border);padding:100px 32px 40px;z-index:999;transition:right .4s var(--ease);overflow-y:auto}
+.mobile-menu.open{right:0}
+.mobile-menu ul{list-style:none}
+.mobile-menu li{border-bottom:1px solid var(--border)}
+.mobile-menu a{display:block;padding:18px 0;font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:500;color:var(--text)}
+.mobile-menu a:hover{color:var(--accent)}
+.mobile-menu .btn{margin-top:20px;width:100%}
+.menu-overlay{position:fixed;inset:0;background:rgba(8,13,22,.7);backdrop-filter:blur(4px);z-index:998;opacity:0;pointer-events:none;transition:opacity .3s var(--ease)}
+.menu-overlay.open{opacity:1;pointer-events:all}
+
+/* ============ HERO ============ */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:140px 0 80px}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg::before{content:'';position:absolute;inset:0;background-image:radial-gradient(ellipse at 15% 30%,rgba(255,176,0,.12) 0%,transparent 50%),radial-gradient(ellipse at 85% 70%,rgba(249,115,22,.08) 0%,transparent 50%),linear-gradient(rgba(38,52,73,.25) 1px,transparent 1px),linear-gradient(90deg,rgba(38,52,73,.25) 1px,transparent 1px);background-size:100% 100%,100% 100%,50px 50px,50px 50px}
+.hero-bg-image{position:absolute;inset:0;background-image:url('assets/images/hero-electrical.jpg');background-size:cover;background-position:center;opacity:.22;mix-blend-mode:luminosity}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,13,22,.6) 0%,rgba(8,13,22,.85) 60%,var(--bg) 100%)}
+.hero-content{position:relative;z-index:2;max-width:880px}
+.hero-eyebrow{font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);margin-bottom:2rem;display:flex;align-items:center;gap:14px}
+.hero-eyebrow .dot{width:8px;height:8px;background:var(--success);border-radius:50%;box-shadow:0 0 0 4px rgba(34,197,94,.2);animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 4px rgba(34,197,94,.2)}50%{box-shadow:0 0 0 8px rgba(34,197,94,.05)}}
+.hero h1{font-size:clamp(2.5rem,6vw,5rem);font-weight:700;line-height:1.05;letter-spacing:-.04em;margin-bottom:2rem}
+.hero h1 .accent{color:var(--accent)}
+.hero-text{font-size:clamp(1rem,1.5vw,1.2rem);color:var(--muted);line-height:1.7;max-width:620px;margin-bottom:2.5rem}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:4rem}
+.hero-stats{display:flex;gap:48px;flex-wrap:wrap;padding-top:2rem;border-top:1px solid var(--border)}
+.hero-stat{display:flex;flex-direction:column;gap:4px}
+.hero-stat-num{font-family:'Space Grotesk',sans-serif;font-size:28px;font-weight:700;color:var(--text)}
+.hero-stat-num span{color:var(--accent)}
+.hero-stat-label{font-size:13px;color:var(--muted);letter-spacing:.05em}
+.scroll-indicator{position:absolute;bottom:32px;right:32px;z-index:2;display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--muted);font-size:11px;letter-spacing:.2em;text-transform:uppercase}
+.scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,var(--accent),transparent);animation:scrollPulse 2s ease-in-out infinite}
+@keyframes scrollPulse{0%,100%{opacity:.3;transform:scaleY(.5)}50%{opacity:1;transform:scaleY(1)}}
+
+/* ============ ABOUT ============ */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+.about-text p{color:var(--muted);margin-bottom:1.5rem;font-size:1.05rem;line-height:1.8}
+.about-text p strong{color:var(--text);font-weight:500}
+.about-highlights{display:grid;gap:16px;margin-top:2rem}
+.about-highlight{display:flex;align-items:flex-start;gap:14px;padding:16px;background:var(--bg-2);border:1px solid var(--border);border-radius:6px;transition:all .3s var(--ease)}
+.about-highlight:hover{border-color:var(--accent);transform:translateX(4px)}
+.about-highlight svg{flex-shrink:0;color:var(--accent);margin-top:2px;width:20px;height:20px}
+.about-highlight h4{font-size:14px;font-weight:600;margin-bottom:4px}
+.about-highlight p{font-size:13px;color:var(--muted);margin:0;line-height:1.5}
+.about-visual{background:var(--bg-2);border:1px solid var(--border);border-radius:8px;padding:2.5rem;position:relative}
+.about-visual-tag{position:absolute;top:-12px;left:32px;background:var(--accent);color:#0A0E16;padding:4px 12px;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;border-radius:3px}
+.about-visual h3{font-size:1.5rem;margin-bottom:1rem}
+.about-visual-list{list-style:none;display:grid;gap:14px;margin-top:1.5rem}
+.about-visual-list li{display:flex;align-items:flex-start;gap:12px;font-size:14px;color:var(--muted);padding-bottom:14px;border-bottom:1px solid var(--border)}
+.about-visual-list li:last-child{border-bottom:none;padding-bottom:0}
+.about-visual-list svg{color:var(--success);flex-shrink:0;margin-top:3px;width:18px;height:18px}
+
+/* ============ SERVICES ============ */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.service-card{background:var(--bg-2);border:1px solid var(--border);border-radius:8px;padding:2rem;position:relative;transition:all .4s var(--ease);overflow:hidden;display:flex;flex-direction:column}
+.service-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease)}
+.service-card:hover{border-color:var(--border-h);transform:translateY(-4px);background:var(--bg-3)}
+.service-card:hover::before{transform:scaleX(1)}
+.service-icon{width:56px;height:56px;background:rgba(255,176,0,.08);border:1px solid rgba(255,176,0,.2);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;color:var(--accent);transition:all .3s var(--ease)}
+.service-icon svg{width:28px;height:28px}
+.service-card:hover .service-icon{background:var(--accent);color:#0A0E16;border-color:var(--accent)}
+.service-number{position:absolute;top:1.75rem;right:1.75rem;font-family:'Space Grotesk',sans-serif;font-size:13px;color:var(--muted-2);font-weight:500;letter-spacing:.05em}
+.service-card h3{font-size:1.25rem;margin-bottom:.75rem;font-weight:600}
+.service-card p{color:var(--muted);font-size:.95rem;line-height:1.65;margin-bottom:1.5rem;flex-grow:1}
+.service-link{display:inline-flex;align-items:center;gap:8px;font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:500;color:var(--accent);transition:gap .3s var(--ease);background:none;padding:0;cursor:pointer}
+.service-link:hover{gap:12px}
+.service-card-cta{background:linear-gradient(135deg,rgba(255,176,0,.08),rgba(249,115,22,.05));border:1px solid rgba(255,176,0,.2);display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.service-card-cta:hover{border-color:var(--accent)}
+.service-card-cta h3{font-size:1.5rem}
+.service-card-cta p{margin-bottom:2rem}
+
+/* ============ WHY CHOOSE ============ */
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--border);border-left:1px solid var(--border);border-radius:8px;overflow:hidden}
+.why-item{padding:2.5rem;border-right:1px solid var(--border);border-bottom:1px solid var(--border);transition:background .3s var(--ease);position:relative}
+.why-item:hover{background:var(--bg-2)}
+.why-icon{width:48px;height:48px;color:var(--accent);margin-bottom:1.25rem}
+.why-item h3{font-size:1.1rem;margin-bottom:.5rem;font-weight:600}
+.why-item p{font-size:.9rem;color:var(--muted);line-height:1.6}
+
+/* ============ PROJECTS ============ */
+.project-filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:2.5rem}
+.filter-btn{padding:10px 20px;font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:500;color:var(--muted);background:var(--bg-2);border:1px solid var(--border);border-radius:4px;transition:all .3s var(--ease)}
+.filter-btn:hover{color:var(--text);border-color:var(--border-h)}
+.filter-btn.active{background:var(--accent);color:#0A0E16;border-color:var(--accent)}
+.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.project-card{background:var(--bg-2);border:1px solid var(--border);border-radius:8px;overflow:hidden;cursor:pointer;transition:all .4s var(--ease)}
+.project-card:hover{border-color:var(--accent);transform:translateY(-4px)}
+.project-image{aspect-ratio:4/3;background:var(--bg-3);position:relative;overflow:hidden}
+.project-image img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease);position:absolute;inset:0;z-index:1}
+.project-card:hover .project-image img{transform:scale(1.05)}
+.media-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--bg-3),var(--bg-2));color:var(--muted-2);gap:10px}
+.media-placeholder-brand{font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:600;color:var(--accent);letter-spacing:.05em}
+.media-placeholder svg{width:40px;height:40px;opacity:.3}
+.media-placeholder span{font-size:10px;letter-spacing:.15em;text-transform:uppercase}
+.project-video-badge{position:absolute;top:12px;right:12px;background:rgba(8,13,22,.85);backdrop-filter:blur(8px);padding:6px 10px;border-radius:4px;display:flex;align-items:center;gap:6px;font-size:11px;font-weight:500;color:var(--accent);z-index:2}
+.project-category{position:absolute;top:12px;left:12px;background:rgba(8,13,22,.85);backdrop-filter:blur(8px);padding:6px 12px;border-radius:4px;font-size:11px;font-weight:500;color:var(--text);letter-spacing:.05em;text-transform:uppercase;z-index:2}
+.project-info{padding:1.5rem}
+.project-info h3{font-size:1.1rem;margin-bottom:.5rem}
+.project-info p{font-size:.9rem;color:var(--muted);line-height:1.6}
+.no-results{grid-column:1/-1;text-align:center;color:var(--muted);padding:3rem;font-size:.95rem}
+
+/* ============ GALLERY ============ */
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.gallery-item{aspect-ratio:1;background:var(--bg-2);border:1px solid var(--border);border-radius:6px;overflow:hidden;cursor:pointer;position:relative;transition:all .4s var(--ease)}
+.gallery-item:hover{border-color:var(--accent);transform:translateY(-2px)}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease);position:absolute;inset:0;z-index:1}
+.gallery-item:hover img{transform:scale(1.08)}
+.gallery-item-overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,13,22,.92) 0%,transparent 50%);display:flex;align-items:flex-end;padding:14px;opacity:0;transition:opacity .3s var(--ease);z-index:2}
+.gallery-item:hover .gallery-item-overlay{opacity:1}
+.gallery-item-overlay h4{font-size:13px;font-weight:500;margin-bottom:2px;color:var(--text)}
+.gallery-item-overlay span{font-size:11px;color:var(--accent);letter-spacing:.05em;text-transform:uppercase}
+.gallery-item-video{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:48px;height:48px;background:rgba(255,176,0,.9);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#0A0E16;transition:transform .3s var(--ease);z-index:2}
+.gallery-item-video svg{width:20px;height:20px;margin-left:2px}
+.gallery-item:hover .gallery-item-video{transform:translate(-50%,-50%) scale(1.1)}
+
+/* ============ QUOTE FORM ============ */
+.quote-section{background:var(--bg-2)}
+.quote-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:4rem;align-items:start}
+.quote-info p{color:var(--muted);margin-bottom:2rem;font-size:1.05rem;line-height:1.7}
+.quote-info-list{list-style:none;display:grid;gap:16px;margin-bottom:2rem}
+.quote-info-list li{display:flex;align-items:flex-start;gap:12px;font-size:14px;color:var(--muted)}
+.quote-info-list svg{color:var(--success);flex-shrink:0;margin-top:3px;width:18px;height:18px}
+.quote-form{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:2.5rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:0}
+.form-group{margin-bottom:16px;display:flex;flex-direction:column}
+.form-group label{font-size:13px;font-weight:500;color:var(--text);margin-bottom:8px;font-family:'Space Grotesk',sans-serif}
+.form-group label .required{color:var(--accent-2)}
+.form-group input,.form-group select,.form-group textarea{background:var(--bg-2);border:1px solid var(--border);border-radius:4px;padding:12px 14px;color:var(--text);font-size:14px;transition:all .2s var(--ease);font-family:'Inter',sans-serif;width:100%}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--accent);background:var(--bg-3)}
+.form-group textarea{resize:vertical;min-height:120px}
+.form-group select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23A8B3C7' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px}
+.form-group.error input,.form-group.error select,.form-group.error textarea{border-color:var(--accent-2)}
+.form-error{font-size:12px;color:var(--accent-2);margin-top:6px;display:none}
+.form-group.error .form-error{display:block}
+.form-feedback{padding:14px 16px;border-radius:4px;font-size:13px;margin-bottom:16px;display:none;align-items:flex-start;gap:10px}
+.form-feedback.show{display:flex}
+.form-feedback.success{background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.3);color:var(--success)}
+.form-feedback.error{background:rgba(249,115,22,.1);border:1px solid rgba(249,115,22,.3);color:var(--accent-2)}
+.form-feedback svg{flex-shrink:0;margin-top:1px;width:18px;height:18px}
+.form-note{font-size:12px;color:var(--muted-2);margin-top:12px;line-height:1.6}
+.whatsapp-badge{display:inline-flex;align-items:center;gap:8px;font-size:12px;color:var(--success);margin-top:8px;font-family:'Space Grotesk',sans-serif;font-weight:500}
+.whatsapp-badge .dot{width:8px;height:8px;background:var(--success);border-radius:50%}
+
+/* ============ CONTACT ============ */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem}
+.contact-cards{display:grid;gap:16px}
+.contact-card{display:flex;align-items:center;gap:18px;padding:1.5rem;background:var(--bg-2);border:1px solid var(--border);border-radius:8px;transition:all .3s var(--ease);text-decoration:none}
+.contact-card:hover{border-color:var(--accent);transform:translateX(4px)}
+.contact-card-icon{width:48px;height:48px;background:rgba(255,176,0,.08);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--accent);flex-shrink:0}
+.contact-card-icon svg{width:22px;height:22px}
+.contact-card-info{display:flex;flex-direction:column}
+.contact-card-label{font-size:12px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:2px}
+.contact-card-value{font-family:'Space Grotesk',sans-serif;font-size:1rem;font-weight:500;color:var(--text)}
+.contact-form{background:var(--bg-2);border:1px solid var(--border);border-radius:8px;padding:2rem}
+.contact-form h3{font-size:1.25rem;margin-bottom:.5rem}
+.contact-form>p{font-size:14px;color:var(--muted);margin-bottom:1.5rem}
+
+/* ============ FAQ ============ */
+.faq-list{max-width:800px;margin:0 auto}
+.faq-item{border-bottom:1px solid var(--border)}
+.faq-item:first-child{border-top:1px solid var(--border)}
+.faq-question{width:100%;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:1.75rem 0;text-align:left;font-family:'Space Grotesk',sans-serif;font-size:1.05rem;font-weight:500;color:var(--text);transition:color .2s var(--ease)}
+.faq-question:hover{color:var(--accent)}
+.faq-icon{width:24px;height:24px;flex-shrink:0;position:relative}
+.faq-icon::before,.faq-icon::after{content:'';position:absolute;background:var(--accent);transition:transform .3s var(--ease)}
+.faq-icon::before{top:50%;left:0;width:100%;height:2px;transform:translateY(-50%)}
+.faq-icon::after{left:50%;top:0;width:2px;height:100%;transform:translateX(-50%)}
+.faq-item.open .faq-icon::after{transform:translateX(-50%) rotate(90deg)}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height .4s var(--ease)}
+.faq-answer-inner{padding:0 0 1.75rem 0;color:var(--muted);font-size:.95rem;line-height:1.7}
+
+/* ============ FOOTER ============ */
+.footer{background:var(--bg-2);border-top:1px solid var(--border);padding:4rem 0 2rem}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:3rem;margin-bottom:3rem}
+.footer-brand .logo{margin-bottom:1rem}
+.footer-brand p{font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:1.5rem;max-width:320px}
+.footer-socials{display:flex;gap:10px}
+.footer-social{width:38px;height:38px;border:1px solid var(--border);border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--muted);transition:all .3s var(--ease)}
+.footer-social:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+.footer-social svg{width:18px;height:18px}
+.footer-col h4{font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text);margin-bottom:1.25rem}
+.footer-col ul{list-style:none;display:grid;gap:10px}
+.footer-col a{font-size:14px;color:var(--muted);transition:color .2s var(--ease)}
+.footer-col a:hover{color:var(--accent)}
+.footer-contact-item{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--muted);margin-bottom:10px}
+.footer-contact-item svg{color:var(--accent);flex-shrink:0;margin-top:3px;width:16px;height:16px}
+.footer-contact-item a{color:var(--muted)}
+.footer-contact-item a:hover{color:var(--accent)}
+.footer-bottom{border-top:1px solid var(--border);padding-top:2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-bottom p{font-size:13px;color:var(--muted-2)}
+.footer-bottom a{font-size:13px;color:var(--muted)}
+
+/* ============ LIGHTBOX ============ */
+.lightbox{position:fixed;inset:0;z-index:2000;background:rgba(8,13,22,.97);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:40px;opacity:0;pointer-events:none;transition:opacity .3s var(--ease)}
+.lightbox.open{opacity:1;pointer-events:all}
+.lightbox-content{max-width:90%;max-height:80vh;position:relative;transform:scale(.95);transition:transform .3s var(--ease)}
+.lightbox.open .lightbox-content{transform:scale(1)}
+.lightbox-content img{max-width:90vw;max-height:80vh;object-fit:contain;border-radius:6px;display:block}
+.lightbox-content video{max-width:90vw;max-height:80vh;border-radius:6px;display:block;background:#000}
+.lightbox-error{padding:3rem 2rem;text-align:center;color:var(--muted);background:var(--bg-2);border:1px solid var(--border);border-radius:8px;max-width:400px}
+.lightbox-error h4{color:var(--text);margin-bottom:.5rem;font-size:1.1rem}
+.lightbox-error p{font-size:13px;line-height:1.6;margin-bottom:.5rem}
+.lightbox-error code{color:var(--accent);font-family:'Space Grotesk',monospace;font-size:12px;background:var(--bg-3);padding:2px 6px;border-radius:3px}
+.lightbox-close{position:absolute;top:20px;right:20px;width:44px;height:44px;border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--text);transition:all .2s var(--ease);background:rgba(16,26,42,.8);backdrop-filter:blur(8px);z-index:10}
+.lightbox-close:hover{border-color:var(--accent);color:var(--accent);transform:rotate(90deg)}
+.lightbox-close svg{width:20px;height:20px}
+.lightbox-info{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);text-align:center;color:var(--muted);font-size:14px;max-width:600px;padding:0 20px}
+.lightbox-info strong{color:var(--text);font-family:'Space Grotesk',sans-serif;display:block;margin-bottom:4px}
+.lightbox-nav{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--text);transition:all .2s var(--ease);background:rgba(16,26,42,.6);backdrop-filter:blur(8px)}
+.lightbox-nav:hover{border-color:var(--accent);color:var(--accent)}
+.lightbox-nav.prev{left:24px}
+.lightbox-nav.next{right:24px}
+.lightbox-nav svg{width:22px;height:22px}
+
+/* ============ SCROLL REVEAL ============ */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.reveal.in-view{opacity:1;transform:translateY(0)}
+.reveal-d1{transition-delay:.1s}
+.reveal-d2{transition-delay:.2s}
+.reveal-d3{transition-delay:.3s}
+.reveal-d4{transition-delay:.4s}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width:1024px){
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .projects-grid{grid-template-columns:repeat(2,1fr)}
+  .gallery-grid{grid-template-columns:repeat(3,1fr)}
+  .why-grid{grid-template-columns:repeat(2,1fr)}
+  .about-grid{grid-template-columns:1fr;gap:3rem}
+  .quote-grid{grid-template-columns:1fr;gap:3rem}
+  .contact-grid{grid-template-columns:1fr;gap:3rem}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:2rem}
+}
+@media (max-width:768px){
+  section{padding:5rem 0}
+  .container{padding:0 20px}
+  .nav-links{display:none}
+  .nav-cta .btn{display:none}
+  .menu-toggle{display:flex}
+  .hero{padding:120px 0 60px;min-height:auto}
+  .hero-stats{gap:24px}
+  .hero-stat-num{font-size:22px}
+  .services-grid{grid-template-columns:1fr}
+  .projects-grid{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .why-grid{grid-template-columns:1fr}
+  .why-item{border-right:none}
+  .form-row{grid-template-columns:1fr}
+  .quote-form{padding:1.5rem}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;text-align:center}
+  .lightbox{padding:20px}
+  .lightbox-nav.prev{left:10px}
+  .lightbox-nav.next{right:10px}
+  .scroll-indicator{display:none}
+}
+@media (max-width:480px){
+  .gallery-grid{grid-template-columns:1fr 1fr}
+  .hero-actions{flex-direction:column}
+  .hero-actions .btn{width:100%}
+  .hero-stats{flex-direction:column;gap:20px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;transition-duration:.01ms !important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ NAVIGATION ============ -->
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#home" class="logo">
+      <div class="logo-mark">B</div>
+      <div class="logo-text">BAM<span>TECH</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#quote" class="btn btn-primary">Request a Quote</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="menu-overlay" id="menuOverlay"></div>
+<aside class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#quote">Request a Quote</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#quote" class="btn btn-primary">Request a Quote</a>
+</aside>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <div class="hero-bg-image"></div>
+  </div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="dot"></span>
+        BAM TECH // Electrical Engineering
+      </div>
+      <h1>Powering Your World.<br><span class="accent">Securing Your Future.</span></h1>
+      <p class="hero-text">Professional electrical installations, intelligent security systems, and reliable solar solutions designed for homes, businesses, and industrial environments.</p>
+      <div class="hero-actions">
+        <a href="#services" class="btn btn-primary">Explore Our Services <span class="btn-arrow">→</span></a>
+        <a href="#quote" class="btn btn-secondary">Request a Quote</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-num">7<span>+</span></div>
+          <div class="hero-stat-label">Specialised Services</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">100<span>%</span></div>
+          <div class="hero-stat-label">Safety-Focused</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">WhatsApp</div>
+          <div class="hero-stat-label">Quick Response</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <div class="eyebrow">01 — About BAM TECH</div>
+        <h2 class="section-title">Engineering Excellence.<br>Reliable Solutions.</h2>
+        <p><strong>BAM TECH</strong> is an electrical engineering and technology company providing professional electrical installations, renewable energy solutions, security systems, and integrated technology services for residential, commercial, and industrial clients.</p>
+        <p>Our work spans the full spectrum of modern electrical and security infrastructure — from wiring and electrification to solar power, CCTV, fire alarms, intercoms, access control, and perimeter security. We combine skilled workmanship with carefully selected equipment to deliver installations that are safe, functional, and built to last.</p>
+        <p>Every project is approached with the same commitment: understand the client's needs, apply sound engineering practice, and deliver a system that performs reliably for years to come.</p>
+        <div class="about-highlights">
+          <div class="about-highlight">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L4 14h7l-1 8 10-12h-7l1-8z"/></svg>
+            <div>
+              <h4>Professional Workmanship</h4>
+              <p>Skilled installation carried out with care and technical precision.</p>
+            </div>
+          </div>
+          <div class="about-highlight">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6l-8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+            <div>
+              <h4>Safety-Conscious Installations</h4>
+              <p>Every installation is carried out with safety as the first priority.</p>
+            </div>
+          </div>
+          <div class="about-highlight">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+            <div>
+              <h4>Customer-Focused Service</h4>
+              <p>Clear communication and honest assessments from consultation to handover.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-visual reveal reveal-d2">
+        <div class="about-visual-tag">Our Approach</div>
+        <h3>What guides every project</h3>
+        <p style="color:var(--muted);font-size:.95rem;line-height:1.7;">We deliver modern electrical and security technology through a process built on engineering discipline and client communication.</p>
+        <ul class="about-visual-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Safety-conscious installations that meet technical requirements</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Reliable solutions built on sound engineering practice</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Customer-focused service from consultation to handover</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Modern electrical and security technology</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Clear communication and honest assessments</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="services" style="background:var(--bg-2);">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="eyebrow">02 — Our Services</div>
+      <h2 class="section-title">Specialised engineering and security services</h2>
+      <p class="section-subtitle">From electrical installation to intelligent security and renewable energy, BAM TECH delivers integrated solutions for homes, businesses, and industrial environments.</p>
+    </div>
+    <div class="services-grid">
+      <!-- Service 1 -->
+      <div class="service-card reveal">
+        <span class="service-number">01</span>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L4 14h7l-1 8 10-12h-7l1-8z"/></svg>
+        </div>
+        <h3>Electrical Installation and Electrification</h3>
+        <p>Professional electrical wiring, electrification, lighting installations, power distribution, and electrical system upgrades.</p>
+        <button class="service-link" data-service="Electrical Installation and Electrification">Request Service <span class="btn-arrow">→</span></button>
+      </div>
+      <!-- Service 2 -->
+      <div class="service-card reveal reveal-d1">
+        <span class="service-number">02</span>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="14" height="10" rx="1"/><path d="M16 10l6-3v10l-6-3"/><path d="M2 20h14"/></svg>
+        </div>
+        <h3>CCTV Installation</h3>
+        <p>Modern CCTV camera installation and surveillance solutions to help monitor and protect residential and commercial properties.</p>
+        <button class="service-link" data-service="CCTV Installation and Security Camera Systems">Request Service <span class="btn-arrow">→</span></button>
+      </div>
+      <!-- Service 3 -->
+      <div class="service-card reveal reveal-d2">
+        <span class="service-number">03</span>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </div>
+        <h3>Solar Installation</h3>
+        <p>Solar power systems designed to provide reliable alternative energy solutions for homes and businesses.</p>
+        <button class="service-link" data-service="Solar Power Installation">Request Service <span class="btn-arrow">→</span></button>
+      </div>
+      <!-- Service 4 -->
+      <div class="service-card reveal">
+        <span class="service-number">04</span>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c0 4 4 5 4 9a4 4 0 01-8 0c0-1 .5-2 1-2.5.5 1 1.5 1.5 2 1 .5-.5.5-1.5 0-2.5-.5-1-1-3 1-5z"/><path d="M5 21h14M7 21a5 5 0 0110 0"/></svg>
+        </div>
+        <h3>Fire Alarm Systems</h3>
+        <p>Fire detection and alarm solutions designed to support early warning and property safety.</p>
+        <button class="service-link" data-service="Fire Alarm Systems">Request Service <span class="btn-arrow">→</span></button>
+      </div>
+      <!-- Service 5 -->
+      <div class="service-card reveal reveal-d1">
+        <span class="service-number">05</span>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2"/><circle cx="12" cy="7" r="1"/><rect x="9" y="11" width="6" height="6" rx="1"/><path d="M2 9v6M22 9v6"/></svg>
+        </div>
+        <h3>Intercom Systems</h3>
+        <p>Reliable intercom solutions for communication, access coordination, homes, offices, and commercial buildings.</p>
+        <button class="service-link" data-service="Intercom Systems">Request Service <span class="btn-arrow">→</span></button>
+      </div>
+      <!-- Service 6 -->
+      <div class="service-card reveal reveal-d2">
+        <span class="service-number">06</span>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/><path d="M16 16l2 2 4-4"/></svg>
+        </div>
+        <h3>Time and Attendance Systems</h3>
+        <p>Technology solutions that help businesses manage staff attendance, clock-in records, and workforce monitoring.</p>
+        <button class="service-link" data-service="Time and Attendance Systems">Request Service <span class="btn-arrow">→</span></button>
+      </div>
+      <!-- Service 7 -->
+      <div class="service-card reveal">
+        <span class="service-number">07</span>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6l3-2 3 2v14l-3-2-3 2V6z"/><path d="M12 6l3-2 3 2v14l-3-2-3 2V6z"/><path d="M21 4l-2 3 2 1-2 3"/></svg>
+        </div>
+        <h3>Electric Fencing</h3>
+        <p>Electric fencing installation and perimeter security solutions designed to improve property protection.</p>
+        <button class="service-link" data-service="Electric Fencing">Request Service <span class="btn-arrow">→</span></button>
+      </div>
+      <!-- CTA Card -->
+      <div class="service-card service-card-cta reveal reveal-d1">
+        <div class="service-icon" style="background:var(--accent);color:#0A0E16;border-color:var(--accent);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+        </div>
+        <h3>Need a custom solution?</h3>
+        <p>Tell us about your project and we'll recommend the right combination of services for your property.</p>
+        <a href="#quote" class="btn btn-primary">Request a Quote <span class="btn-arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY CHOOSE ============ -->
+<section id="why">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="eyebrow">03 — Why Choose BAM TECH</div>
+      <h2 class="section-title">Built on trust, delivered with precision</h2>
+      <p class="section-subtitle">Six principles that shape every installation, every project, and every client relationship.</p>
+    </div>
+    <div class="why-grid reveal">
+      <div class="why-item">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M9 8l2 2 4-4M8.5 14L7 22l5-3 5 3-1.5-8"/></svg>
+        </div>
+        <h3>Professional Installation</h3>
+        <p>Skilled workmanship carried out with technical precision and attention to detail on every project.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6l-8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <h3>Quality Equipment</h3>
+        <p>We work with carefully selected materials and components to ensure long-term reliability.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18h18M5 18v-6a7 7 0 0114 0v6"/><path d="M10 8V5a2 2 0 014 0v3M9 18v2M15 18v2"/></svg>
+        </div>
+        <h3>Safety-Focused Workmanship</h3>
+        <p>Safety is built into every installation, protecting your property, your people, and your investment.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="1"/><rect x="9" y="9" width="6" height="6" rx="0.5"/><path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/></svg>
+        </div>
+        <h3>Modern Technology</h3>
+        <p>We deploy current electrical and security technology that meets the demands of modern properties.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14v-2a8 8 0 0116 0v2"/><rect x="2" y="14" width="4" height="6" rx="1"/><rect x="18" y="14" width="4" height="6" rx="1"/><path d="M20 20a4 4 0 01-4 3h-4"/></svg>
+        </div>
+        <h3>Reliable Customer Support</h3>
+        <p>Responsive communication and support from first enquiry through to project completion and beyond.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h10M18 6h2M4 12h2M10 12h10M4 18h8M16 18h4"/><circle cx="16" cy="6" r="2"/><circle cx="8" cy="12" r="2"/><circle cx="14" cy="18" r="2"/></svg>
+        </div>
+        <h3>Solutions Tailored to Your Needs</h3>
+        <p>Every property is different. We assess your requirements and design a system that fits them.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section id="projects" style="background:var(--bg-2);">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="eyebrow">04 — Projects & Portfolio</div>
+      <h2 class="section-title">Selected work and project showcase</h2>
+      <p class="section-subtitle">A display of project categories across our service range. Demonstration placeholders are shown below — replace them with your own project photos and videos using the project configuration in the code.</p>
+    </div>
+    <div class="project-filters reveal" id="projectFilters"></div>
+    <div class="projects-grid" id="projectsGrid"></div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section id="gallery">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="eyebrow">05 — Media Gallery</div>
+      <h2 class="section-title">Images and videos from our work</h2>
+      <p class="section-subtitle">A gallery of installation photos and project videos. Add your own media files to the repository and list them in the media configuration inside the code — they will appear here automatically.</p>
+    </div>
+    <div class="project-filters reveal" id="galleryFilters"></div>
+    <div class="gallery-grid" id="galleryGrid"></div>
+  </div>
+</section>
+
+<!-- ============ QUOTE FORM ============ -->
+<section id="quote" class="quote-section">
+  <div class="container">
+    <div class="quote-grid">
+      <div class="quote-info reveal">
+        <div class="eyebrow">06 — Request a Quote</div>
+        <h2 class="section-title">Tell us about your project</h2>
+        <p>Share the details of your electrical, solar, or security project and we'll respond with guidance and a quotation. Submit your request through the form and it will open a pre-filled WhatsApp message with your details.</p>
+        <ul class="quote-info-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Residential, commercial, and industrial projects</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Clear quotations and honest assessments</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Site visits and consultations available</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Quick response via WhatsApp</li>
+        </ul>
+        <div class="whatsapp-badge">
+          <span class="dot"></span>
+          WhatsApp quoting is active — we respond fast
+        </div>
+      </div>
+      <form class="quote-form reveal reveal-d2" id="quoteForm" novalidate>
+        <div class="form-feedback" id="formFeedback"></div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="quote-name">Full Name <span class="required">*</span></label>
+            <input type="text" id="quote-name" name="name" required autocomplete="name">
+            <span class="form-error">Please enter your name.</span>
+          </div>
+          <div class="form-group">
+            <label for="quote-phone">Phone Number <span class="required">*</span></label>
+            <input type="tel" id="quote-phone" name="phone" required autocomplete="tel" placeholder="e.g. 0801 234 5678">
+            <span class="form-error">Please enter your phone number.</span>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="quote-email">Email Address</label>
+            <input type="email" id="quote-email" name="email" autocomplete="email" placeholder="you@example.com">
+            <span class="form-error">Please enter a valid email address.</span>
+          </div>
+          <div class="form-group">
+            <label for="quote-service">Service Required <span class="required">*</span></label>
+            <select id="quote-service" name="service" required>
+              <option value="">Select a service</option>
+              <option>Electrical Installation and Electrification</option>
+              <option>CCTV Installation and Security Camera Systems</option>
+              <option>Solar Power Installation</option>
+              <option>Fire Alarm Systems</option>
+              <option>Intercom Systems</option>
+              <option>Time and Attendance Systems</option>
+              <option>Electric Fencing</option>
+            </select>
+            <span class="form-error">Please select a service.</span>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="quote-location">Project Location <span class="required">*</span></label>
+            <input type="text" id="quote-location" name="location" required placeholder="City, area, or address">
+            <span class="form-error">Please enter the project location.</span>
+          </div>
+          <div class="form-group">
+            <label for="quote-contact">Preferred Contact Method <span class="required">*</span></label>
+            <select id="quote-contact" name="contactMethod" required>
+              <option value="">Select preference</option>
+              <option>WhatsApp</option>
+              <option>Phone Call</option>
+              <option>Email</option>
+            </select>
+            <span class="form-error">Please select a preferred contact method.</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="quote-description">Project Description <span class="required">*</span></label>
+          <textarea id="quote-description" name="description" required placeholder="Describe your project requirements, property type, and any specific needs..."></textarea>
+          <span class="form-error">Please describe your project.</span>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;">Send via WhatsApp <span class="btn-arrow">→</span></button>
+        <p class="form-note">Submitting this form opens WhatsApp with your details pre-filled. Your information is not stored on this website and is only used to start your quotation request.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="eyebrow">07 — Contact Us</div>
+      <h2 class="section-title">Get in touch with BAM TECH</h2>
+      <p class="section-subtitle">Reach us by phone, email, or WhatsApp. We're ready to discuss your electrical, solar, and security project requirements.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-cards reveal">
+        <a href="tel:07045138909" class="contact-card">
+          <div class="contact-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div class="contact-card-info">
+            <span class="contact-card-label">Call Us</span>
+            <span class="contact-card-value">07045138909</span>
+          </div>
+        </a>
+        <a href="mailto:bamtech201@gmail.com" class="contact-card">
+          <div class="contact-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 5L2 7"/></svg>
+          </div>
+          <div class="contact-card-info">
+            <span class="contact-card-label">Email Us</span>
+            <span class="contact-card-value">bamtech201@gmail.com</span>
+          </div>
+        </a>
+        <a href="https://wa.me/2347045138909" target="_blank" rel="noopener" class="contact-card">
+          <div class="contact-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+          </div>
+          <div class="contact-card-info">
+            <span class="contact-card-label">WhatsApp</span>
+            <span class="contact-card-value">Chat with us</span>
+          </div>
+        </a>
+        <div class="contact-card">
+          <div class="contact-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="contact-card-info">
+            <span class="contact-card-label">Service Area</span>
+            <span class="contact-card-value" contenteditable="true" style="outline:none;">Add your service area here</span>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form reveal reveal-d2">
+        <h3>Send a quick message</h3>
+        <p>Fill in your details and we'll get back to you via WhatsApp.</p>
+        <form id="contactForm" novalidate>
+          <div class="form-feedback" id="contactFeedback"></div>
+          <div class="form-group">
+            <label for="contact-name">Your Name <span class="required">*</span></label>
+            <input type="text" id="contact-name" name="name" required>
+            <span class="form-error">Please enter your name.</span>
+          </div>
+          <div class="form-group">
+            <label for="contact-phone">Phone Number <span class="required">*</span></label>
+            <input type="tel" id="contact-phone" name="phone" required>
+            <span class="form-error">Please enter your phone number.</span>
+          </div>
+          <div class="form-group">
+            <label for="contact-message">Message <span class="required">*</span></label>
+            <textarea id="contact-message" name="message" required style="min-height:100px;" placeholder="How can we help you?"></textarea>
+            <span class="form-error">Please enter a message.</span>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;">Send via WhatsApp <span class="btn-arrow">→</span></button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq" style="background:var(--bg-2);">
+  <div class="container">
+    <div class="section-header center reveal">
+      <div class="eyebrow">08 — FAQ</div>
+      <h2 class="section-title">Frequently asked questions</h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>What electrical services does BAM TECH provide?</span>
+          <span class="faq-icon"></span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">BAM TECH provides professional electrical installation and electrification, including wiring, lighting installation, power distribution, and electrical system upgrades for residential, commercial, and industrial properties.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>Do you install solar systems?</span>
+          <span class="faq-icon"></span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Yes. We design and install solar power systems for homes and businesses, providing reliable alternative energy solutions tailored to your energy needs and property type.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>Can I request CCTV installation?</span>
+          <span class="faq-icon"></span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Absolutely. We install modern CCTV camera systems and surveillance solutions for residential and commercial properties to help you monitor and protect your premises.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>Do you install fire alarm systems?</span>
+          <span class="faq-icon"></span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Yes. We install fire detection and alarm systems designed to support early warning and improve property safety for homes, offices, and commercial buildings.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>How can I request a quotation?</span>
+          <span class="faq-icon"></span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">You can request a quotation by filling out the quote form on this page, calling us directly at 07045138909, or sending a WhatsApp message. Provide details about your project and we will respond with guidance and a quote.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>Can BAM TECH handle residential and commercial projects?</span>
+          <span class="faq-icon"></span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Yes. Our services cover residential homes, commercial offices, and industrial facilities. We tailor each installation to the specific requirements of the property and client.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="logo">
+          <div class="logo-mark">B</div>
+          <div class="logo-text">BAM<span>TECH</span></div>
+        </a>
+        <p>BAM TECH provides professional electrical installations, solar power systems, and intelligent security solutions for homes, businesses, and industrial environments.</p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social" aria-label="Facebook" data-placeholder="social-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="#" class="footer-social" aria-label="Instagram" data-placeholder="social-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="1" fill="currentColor"/></svg></a>
+          <a href="#" class="footer-social" aria-label="LinkedIn" data-placeholder="social-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2"/><path d="M7 10v7M7 7v.01M11 17v-4a2 2 0 014 0v4M11 10v7"/></svg></a>
+          <a href="https://wa.me/2347045138909" target="_blank" rel="noopener" class="footer-social" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Electrical Installation</a></li>
+          <li><a href="#services">CCTV Installation</a></li>
+          <li><a href="#services">Solar Installation</a></li>
+          <li><a href="#services">Fire Alarm Systems</a></li>
+          <li><a href="#services">Intercom Systems</a></li>
+          <li><a href="#services">Electric Fencing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <a href="tel:07045138909">07045138909</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 5L2 7"/></svg>
+          <a href="mailto:bamtech201@gmail.com">bamtech201@gmail.com</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+          <a href="https://wa.me/2347045138909" target="_blank" rel="noopener">WhatsApp Us</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> BAM TECH. All rights reserved.</p>
+      <p>Electrical Engineering • Solar • Security Systems</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close viewer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+  </button>
+  <button class="lightbox-nav prev" id="lightboxPrev" aria-label="Previous">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+  </button>
+  <div class="lightbox-content" id="lightboxContent"></div>
+  <button class="lightbox-nav next" id="lightboxNext" aria-label="Next">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+  </button>
+  <div class="lightbox-info" id="lightboxInfo"></div>
+</div>
+
+<script>
+/* ====================================================================
+   BAM TECH — Website JavaScript
+   ==================================================================== */
+
+/* ====================================================================
+   MEDIA CONFIGURATION — PROJECTS
+   ====================================================================
+   To add a new project:
+   1. Upload your image to: assets/images/your-photo.jpg
+      (or video to: assets/videos/your-video.mp4)
+   2. Copy one of the entries below and change the fields.
+   3. Save the file — the project appears on the website automatically.
+
+   Fields:
+   - title:        Project name shown on the card
+   - category:     One of: electrical, solar, cctv, fire-alarm, intercom, electric-fencing
+   - categoryLabel: Display label for the category badge
+   - description:  Short description shown on the card
+   - image:        Path to image file (e.g. 'assets/images/solar-installation.jpg')
+   - video:        Path to video file (optional — leave as '' for image-only projects)
+   ==================================================================== */
+const PROJECTS_CONFIG = [
+  {
+    title: 'Industrial Electrical Installation',
+    category: 'electrical',
+    categoryLabel: 'Electrical',
+    description: 'Complete electrical wiring and power distribution for an industrial facility.',
+    image: 'assets/images/electrical-installation.jpg',
+    video: ''
+  },
+  {
+    title: 'Rooftop Solar Power System',
+    category: 'solar',
+    categoryLabel: 'Solar',
+    description: 'Solar panel installation providing alternative energy for a commercial building.',
+    image: 'assets/images/solar-installation.jpg',
+    video: ''
+  },
+  {
+    title: 'Commercial CCTV Deployment',
+    category: 'cctv',
+    categoryLabel: 'CCTV & Security',
+    description: 'Multi-camera CCTV surveillance system covering a commercial property perimeter.',
+    image: 'assets/images/cctv-installation.jpg',
+    video: ''
+  },
+  {
+    title: 'Office Fire Alarm System',
+    category: 'fire-alarm',
+    categoryLabel: 'Fire Alarm',
+    description: 'Fire detection and alarm installation for early warning and property safety.',
+    image: 'assets/images/fire-alarm.jpg',
+    video: ''
+  },
+  {
+    title: 'Building Intercom and Access',
+    category: 'intercom',
+    categoryLabel: 'Intercom & Access',
+    description: 'Intercom installation for communication and access coordination across a building.',
+    image: 'assets/images/intercom.jpg',
+    video: ''
+  },
+  {
+    title: 'Perimeter Electric Fencing',
+    category: 'electric-fencing',
+    categoryLabel: 'Electric Fencing',
+    description: 'Electric fencing installation for perimeter security and property protection.',
+    image: 'assets/images/electric-fencing.jpg',
+    video: ''
+  }
+];
+
+/* ====================================================================
+   MEDIA CONFIGURATION — GALLERY (Images and Videos)
+   ====================================================================
+   To add a new gallery item:
+   1. Upload your file to assets/images/ or assets/videos/
+   2. Copy one of the entries below and change the fields.
+   3. Save the file — the item appears in the gallery automatically.
+
+   Fields:
+   - type:        'image' or 'video'
+   - src:         Path to the file (e.g. 'assets/images/photo.jpg' or 'assets/videos/video.mp4')
+   - poster:      (Videos only) Path to a thumbnail image shown before playing
+   - title:       Title shown on hover and in the lightbox
+   - category:    One of: electrical, solar, cctv, fire-alarm, intercom, electric-fencing
+   - description: Short description shown in the lightbox
+   ==================================================================== */
+const MEDIA_CONFIG = [
+  { type: 'image', src: 'assets/images/electrical-installation.jpg', title: 'Electrical Installation', category: 'electrical', description: 'Wiring and electrification work.' },
+  { type: 'image', src: 'assets/images/solar-installation.jpg', title: 'Solar Panels', category: 'solar', description: 'Rooftop solar power system.' },
+  { type: 'image', src: 'assets/images/cctv-installation.jpg', title: 'CCTV Camera', category: 'cctv', description: 'Security camera deployment.' },
+  { type: 'image', src: 'assets/images/fire-alarm.jpg', title: 'Fire Alarm', category: 'fire-alarm', description: 'Fire detection system.' },
+  { type: 'image', src: 'assets/images/intercom.jpg', title: 'Intercom Unit', category: 'intercom', description: 'Intercom and access system.' },
+  { type: 'image', src: 'assets/images/electric-fencing.jpg', title: 'Electric Fence', category: 'electric-fencing', description: 'Perimeter security fencing.' },
+  { type: 'video', src: 'assets/videos/electrical-project.mp4', poster: 'assets/images/electrical-installation.jpg', title: 'Electrical Project Video', category: 'electrical', description: 'Project walkthrough video.' },
+  { type: 'video', src: 'assets/videos/solar-project.mp4', poster: 'assets/images/solar-installation.jpg', title: 'Solar Project Video', category: 'solar', description: 'Solar installation video.' },
+  { type: 'video', src: 'assets/videos/cctv-project.mp4', poster: 'assets/images/cctv-installation.jpg', title: 'CCTV Project Video', category: 'cctv', description: 'CCTV deployment video.' }
+];
+
+/* ====================================================================
+   CATEGORY LABELS
+   ==================================================================== */
+const CATEGORIES = [
+  { key: 'all', label: 'All' },
+  { key: 'electrical', label: 'Electrical' },
+  { key: 'solar', label: 'Solar' },
+  { key: 'cctv', label: 'CCTV & Security' },
+  { key: 'fire-alarm', label: 'Fire Alarms' },
+  { key: 'intercom', label: 'Intercom & Access' },
+  { key: 'electric-fencing', label: 'Electric Fencing' }
+];
+
+/* ====================================================================
+   WHATSAPP NUMBER — International format without + or leading 0
+   ==================================================================== */
+const WHATSAPP_NUMBER = '2347045138909';
+
+/* ====================================================================
+   UTILITIES
+   ==================================================================== */
+function escapeHtml(str) {
+  if (!str) return '';
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+function placeholderHTML() {
+  return `<div class="media-placeholder">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+    <span class="media-placeholder-brand">BAM TECH</span>
+    <span>Demonstration Placeholder</span>
+  </div>`;
+}
+
+function videoIcon() {
+  return '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 3l14 9-14 9V3z"/></svg>';
+}
+
+/* ====================================================================
+   NAVIGATION — Scroll effect, mobile menu, active links
+   ==================================================================== */
+function initNav() {
+  const nav = document.getElementById('nav');
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const menuOverlay = document.getElementById('menuOverlay');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const sections = document.querySelectorAll('section[id]');
+
+  // Scroll effect
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 30) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+    updateActiveLink();
+  });
+
+  // Mobile menu toggle
+  function toggleMenu(open) {
+    const isOpen = open !== undefined ? open : !mobileMenu.classList.contains('open');
+    mobileMenu.classList.toggle('open', isOpen);
+    menuOverlay.classList.toggle('open', isOpen);
+    menuToggle.classList.toggle('open', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  }
+
+  menuToggle.addEventListener('click', () => toggleMenu());
+  menuOverlay.addEventListener('click', () => toggleMenu(false));
+
+  // Close mobile menu on link click
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => toggleMenu(false));
+  });
+
+  // Close menu on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      toggleMenu(false);
+      closeLightbox();
+    }
+  });
+
+  // Active link tracking
+  function updateActiveLink() {
+    const scrollPos = window.scrollY + 120;
+    let current = '';
+    sections.forEach(sec => {
+      if (scrollPos >= sec.offsetTop) {
+        current = sec.id;
+      }
+    });
+    navLinks.forEach(link => {
+      link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+    });
+  }
+  updateActiveLink();
+}
+
+/* ====================================================================
+   SCROLL REVEAL — IntersectionObserver
+   ==================================================================== */
+function initScrollReveal() {
+  const reveals = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) {
+    reveals.forEach(el => el.classList.add('in-view'));
+    return;
+  }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+  reveals.forEach(el => observer.observe(el));
+}
+
+/* ====================================================================
+   PROJECTS — Render, filter, lightbox integration
+   ==================================================================== */
+let currentProjectFilter = 'all';
+let currentGalleryFilter = 'all';
+
+function renderProjectFilters() {
+  const container = document.getElementById('projectFilters');
+  container.innerHTML = CATEGORIES.map(cat => 
+    `<button class="filter-btn ${cat.key === 'all' ? 'active' : ''}" data-filter="${cat.key}">${cat.label}</button>`
+  ).join('');
+  container.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      container.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentProjectFilter = btn.dataset.filter;
+      renderProjects();
+    });
+  });
+}
+
+function renderProjects() {
+  const grid = document.getElementById('projectsGrid');
+  const filtered = currentProjectFilter === 'all' 
+    ? PROJECTS_CONFIG 
+    : PROJECTS_CONFIG.filter(p => p.category === currentProjectFilter);
+
+  if (filtered.length === 0) {
+    grid.innerHTML = '<p class="no-results">No projects in this category yet. Check back soon.</p>';
+    return;
+  }
+
+  grid.innerHTML = filtered.map((project, idx) => {
+    const hasVideo = project.video && project.video !== '';
+    return `
+      <article class="project-card" data-index="${idx}" data-category="${project.category}">
+        <div class="project-image">
+          <span class="project-category">${escapeHtml(project.categoryLabel)}</span>
+          ${hasVideo ? `<span class="project-video-badge">${videoIcon()} Video</span>` : ''}
+          ${placeholderHTML()}
+          ${project.image ? `<img src="${escapeHtml(project.image)}" alt="${escapeHtml(project.title)}" loading="lazy" onerror="this.style.display='none'">` : ''}
+        </div>
+        <div class="project-info">
+          <h3>${escapeHtml(project.title)}</h3>
+          <p>${escapeHtml(project.description)}</p>
+        </div>
+      </article>
+    `;
+  }).join('');
+
+  grid.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const idx = parseInt(card.dataset.index);
+      const items = filtered.map(p => ({
+        type: (p.video && p.video !== '') ? 'video' : 'image',
+        src: (p.video && p.video !== '') ? p.video : p.image,
+        poster: p.image,
+        title: p.title,
+        description: p.description
+      }));
+      openLightbox(items, idx);
+    });
+  });
+}
+
+/* ====================================================================
+   GALLERY — Render, filter, lightbox integration
+   ==================================================================== */
+function renderGalleryFilters() {
+  const container = document.getElementById('galleryFilters');
+  container.innerHTML = CATEGORIES.map(cat => 
+    `<button class="filter-btn ${cat.key === 'all' ? 'active' : ''}" data-filter="${cat.key}">${cat.label}</button>`
+  ).join('');
+  container.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      container.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentGalleryFilter = btn.dataset.filter;
+      renderGallery();
+    });
+  });
+}
+
+function renderGallery() {
+  const grid = document.getElementById('galleryGrid');
+  const filtered = currentGalleryFilter === 'all'
+    ? MEDIA_CONFIG
+    : MEDIA_CONFIG.filter(m => m.category === currentGalleryFilter);
+
+  if (filtered.length === 0) {
+    grid.innerHTML = '<p class="no-results">No media in this category yet.</p>';
+    return;
+  }
+
+  grid.innerHTML = filtered.map((item, idx) => {
+    const isVideo = item.type === 'video';
+    return `
+      <div class="gallery-item" data-index="${idx}">
+        ${placeholderHTML()}
+        ${item.type === 'image' && item.src 
+          ? `<img src="${escapeHtml(item.src)}" alt="${escapeHtml(item.title)}" loading="lazy" onerror="this.style.display='none'">` 
+          : ''}
+        ${isVideo && item.poster 
+          ? `<img src="${escapeHtml(item.poster)}" alt="${escapeHtml(item.title)}" loading="lazy" onerror="this.style.display='none'">` 
+          : ''}
+        ${isVideo ? `<div class="gallery-item-video">${videoIcon()}</div>` : ''}
+        <div class="gallery-item-overlay">
+          <h4>${escapeHtml(item.title)}</h4>
+          <span>${isVideo ? 'Video' : 'Image'}</span>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  grid.querySelectorAll('.gallery-item').forEach(el => {
+    el.addEventListener('click', () => {
+      const idx = parseInt(el.dataset.index);
+      openLightbox(filtered, idx);
+    });
+  });
+}
+
+/* ====================================================================
+   LIGHTBOX — Image and video viewer
+   ==================================================================== */
+let lightboxItems = [];
+let lightboxIndex = 0;
+
+function openLightbox(items, index) {
+  lightboxItems = items;
+  lightboxIndex = index;
+  showLightboxItem();
+  document.getElementById('lightbox').classList.add('open');
+  document.getElementById('lightbox').setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+}
+
+function showLightboxItem() {
+  const item = lightboxItems[lightboxIndex];
+  if (!item) return;
+  const content = document.getElementById('lightboxContent');
+  const info = document.getElementById('lightboxInfo');
+
+  if (item.type === 'video') {
+    content.innerHTML = `
+      <video controls autoplay preload="metadata" playsinline>
+        <source src="${escapeHtml(item.src)}" type="video/mp4">
+        Your browser does not support this video.
+      </video>
+    `;
+    // Handle video load error
+    const video = content.querySelector('video');
+    video.addEventListener('error', () => {
+      content.innerHTML = `
+        <div class="lightbox-error">
+          <h4>Video not available</h4>
+          <p>Add the video file to your repository at:</p>
+          <p><code>${escapeHtml(item.src)}</code></p>
+          <p style="margin-top:1rem;font-size:12px;">Once the file is uploaded, it will appear here automatically.</p>
+        </div>
+      `;
+    });
+  } else {
+    content.innerHTML = `
+      <img src="${escapeHtml(item.src)}" alt="${escapeHtml(item.title || '')}" onerror="this.style.display='none';document.getElementById('lightboxError_${lightboxIndex}').style.display='flex'">
+      <div id="lightboxError_${lightboxIndex}" class="lightbox-error" style="display:none;">
+        <h4>Image not available</h4>
+        <p>Add the image file to your repository at:</p>
+        <p><code>${escapeHtml(item.src)}</code></p>
+        <p style="margin-top:1rem;font-size:12px;">Once the file is uploaded, it will appear here automatically.</p>
+      </div>
+    `;
+  }
+
+  info.innerHTML = `<strong>${escapeHtml(item.title || '')}</strong>${item.description ? escapeHtml(item.description) : ''}`;
+}
+
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+  document.getElementById('lightbox').setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  // Stop video playback
+  document.getElementById('lightboxContent').innerHTML = '';
+}
+
+function nextLightbox() {
+  lightboxIndex = (lightboxIndex + 1) % lightboxItems.length;
+  showLightboxItem();
+}
+
+function prevLightbox() {
+  lightboxIndex = (lightboxIndex - 1 + lightboxItems.length) % lightboxItems.length;
+  showLightboxItem();
+}
+
+function initLightbox() {
+  document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+  document.getElementById('lightboxNext').addEventListener('click', nextLightbox);
+  document.getElementById('lightboxPrev').addEventListener('click', prevLightbox);
+  document.getElementById('lightbox').addEventListener('click', (e) => {
+    if (e.target.id === 'lightbox') closeLightbox();
+  });
+  // Arrow key navigation
+  document.addEventListener('keydown', (e) => {
+    if (!document.getElementById('lightbox').classList.contains('open')) return;
+    if (e.key === 'ArrowRight') nextLightbox();
+    if (e.key === 'ArrowLeft') prevLightbox();
+  });
+}
+
+/* ====================================================================
+   FAQ ACCORDION
+   ==================================================================== */
+function initFAQ() {
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const question = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+    question.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      // Close all
+      document.querySelectorAll('.faq-item').forEach(other => {
+        other.classList.remove('open');
+        other.querySelector('.faq-answer').style.maxHeight = '0';
+        other.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+      });
+      // Open clicked
+      if (!isOpen) {
+        item.classList.add('open');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+        question.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+}
+
+/* ====================================================================
+   QUOTE FORM — Validation + WhatsApp submission
+   ==================================================================== */
+function initQuoteForm() {
+  const form = document.getElementById('quoteForm');
+  const feedback = document.getElementById('formFeedback');
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    feedback.className = 'form-feedback';
+    feedback.innerHTML = '';
+
+    // Get values
+    const name = document.getElementById('quote-name').value.trim();
+    const phone = document.getElementById('quote-phone').value.trim();
+    const email = document.getElementById('quote-email').value.trim();
+    const service = document.getElementById('quote-service').value;
+    const location = document.getElementById('quote-location').value.trim();
+    const contactMethod = document.getElementById('quote-contact').value;
+    const description = document.getElementById('quote-description').value.trim();
+
+    // Validate
+    let isValid = true;
+    const errors = [];
+
+    if (!name) { setFieldError('quote-name', true); isValid = false; } 
+    else setFieldError('quote-name', false);
+
+    if (!phone) { setFieldError('quote-phone', true); isValid = false; }
+    else setFieldError('quote-phone', false);
+
+    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { 
+      setFieldError('quote-email', true); isValid = false; 
+    } else setFieldError('quote-email', false);
+
+    if (!service) { setFieldError('quote-service', true); isValid = false; }
+    else setFieldError('quote-service', false);
+
+    if (!location) { setFieldError('quote-location', true); isValid = false; }
+    else setFieldError('quote-location', false);
+
+    if (!contactMethod) { setFieldError('quote-contact', true); isValid = false; }
+    else setFieldError('quote-contact', false);
+
+    if (!description) { setFieldError('quote-description', true); isValid = false; }
+    else setFieldError('quote-description', false);
+
+    if (!isValid) {
+      feedback.className = 'form-feedback error show';
+      feedback.innerHTML = `
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16v.01"/></svg>
+        <span>Please fill in all required fields correctly.</span>
+      `;
+      feedback.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+
+    // Build WhatsApp message
+    let message = `Hello BAM TECH, I would like to request a quotation.\n\n`;
+    message += `Name: ${name}\n`;
+    message += `Phone: ${phone}\n`;
+    if (email) message += `Email: ${email}\n`;
+    message += `Service Required: ${service}\n`;
+    message += `Project Location: ${location}\n`;
+    message += `Preferred Contact: ${contactMethod}\n\n`;
+    message += `Project Description:\n${description}`;
+
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+    
+    feedback.className = 'form-feedback success show';
+    feedback.innerHTML = `
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+      <span>Opening WhatsApp with your project details. If WhatsApp doesn't open automatically, <a href="${url}" target="_blank" rel="noopener" style="color:var(--success);text-decoration:underline;">click here</a>.</span>
+    `;
+
+    // Open WhatsApp
+    window.open(url, '_blank');
+  });
+
+  function setFieldError(id, hasError) {
+    const field = document.getElementById(id).closest('.form-group');
+    if (field) field.classList.toggle('error', hasError);
+  }
+
+  // Clear error on input
+  form.querySelectorAll('input, select, textarea').forEach(input => {
+    input.addEventListener('input', () => {
+      const field = input.closest('.form-group');
+      if (field) field.classList.remove('error');
+    });
+  });
+}
+
+/* ====================================================================
+   CONTACT FORM — Quick message via WhatsApp
+   ==================================================================== */
+function initContactForm() {
+  const form = document.getElementById('contactForm');
+  const feedback = document.getElementById('contactFeedback');
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    feedback.className = 'form-feedback';
+    feedback.innerHTML = '';
+
+    const name = document.getElementById('contact-name').value.trim();
+    const phone = document.getElementById('contact-phone').value.trim();
+    const message = document.getElementById('contact-message').value.trim();
+
+    let isValid = true;
+
+    if (!name) { document.getElementById('contact-name').closest('.form-group').classList.add('error'); isValid = false; }
+    else document.getElementById('contact-name').closest('.form-group').classList.remove('error');
+
+    if (!phone) { document.getElementById('contact-phone').closest('.form-group').classList.add('error'); isValid = false; }
+    else document.getElementById('contact-phone').closest('.form-group').classList.remove('error');
+
+    if (!message) { document.getElementById('contact-message').closest('.form-group').classList.add('error'); isValid = false; }
+    else document.getElementById('contact-message').closest('.form-group').classList.remove('error');
+
+    if (!isValid) {
+      feedback.className = 'form-feedback error show';
+      feedback.innerHTML = `
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16v.01"/></svg>
+        <span>Please fill in all required fields.</span>
+      `;
+      return;
+    }
+
+    const waMessage = `Hello BAM TECH, I have an enquiry.\n\nName: ${name}\nPhone: ${phone}\n\nMessage:\n${message}`;
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(waMessage)}`;
+    
+    feedback.className = 'form-feedback success show';
+    feedback.innerHTML = `
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+      <span>Opening WhatsApp with your message. If it doesn't open, <a href="${url}" target="_blank" rel="noopener" style="color:var(--success);text-decoration:underline;">click here</a>.</span>
+    `;
+
+    window.open(url, '_blank');
+  });
+
+  form.querySelectorAll('input, textarea').forEach(input => {
+    input.addEventListener('input', () => {
+      input.closest('.form-group').classList.remove('error');
+    });
+  });
+}
+
+/* ====================================================================
+   SERVICE REQUEST BUTTONS — Pre-fill quote form
+   ==================================================================== */
+function initServiceButtons() {
+  document.querySelectorAll('[data-service]').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const service = btn.dataset.service;
+      const select = document.getElementById('quote-service');
+      // Set the select value by matching option text
+      for (let option of select.options) {
+        if (option.text === service) {
+          select.value = option.value;
+          break;
+        }
+      }
+      // Scroll to quote form
+      document.getElementById('quote').scrollIntoView({ behavior: 'smooth' });
+      // Flash the select to draw attention
+      setTimeout(() => {
+        select.style.borderColor = 'var(--accent)';
+        select.focus();
+        setTimeout(() => { select.style.borderColor = ''; }, 1500);
+      }, 600);
+    });
+  });
+}
+
+/* ====================================================================
+   AUTO COPYRIGHT YEAR
+   ==================================================================== */
+function initYear() {
+  document.getElementById('year').textContent = new Date().getFullYear();
+}
+
+/* ====================================================================
+   SOCIAL LINK PLACEHOLDERS — Prevent navigation on unconfigured links
+   ==================================================================== */
+function initSocialLinks() {
+  document.querySelectorAll('[data-placeholder="social-link"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      // Do nothing — these are placeholders for the user to update
+    });
+  });
+}
+
+/* ====================================================================
+   INITIALIZE EVERYTHING
+   ==================================================================== */
+document.addEventListener('DOMContentLoaded', () => {
+  initNav();
+  initScrollReveal();
+  renderProjectFilters();
+  renderProjects();
+  renderGalleryFilters();
+  renderGallery();
+  initLightbox();
+  initFAQ();
+  initQuoteForm();
+  initContactForm();
+  initServiceButtons();
+  initYear();
+  initSocialLinks();
+});
+</script>
+</body>
+</html>
